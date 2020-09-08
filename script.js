@@ -1,111 +1,147 @@
-let n1=document.getElementById("n1").addEventListener("click",numero1)
-let n2=document.getElementById("n2").addEventListener("click",numero2)
-let n3=document.getElementById("n3").addEventListener("click",numero3)
-let n4=document.getElementById("n4").addEventListener("click",numero4)
-let n5=document.getElementById("n5").addEventListener("click",numero5)
-let n6=document.getElementById("n6").addEventListener("click",numero6)
-let n7=document.getElementById("n7").addEventListener("click",numero7)
-let n8=document.getElementById("n8").addEventListener("click",numero8)
-let n9=document.getElementById("n9").addEventListener("click",numero9)
-let n0=document.getElementById("n0").addEventListener("click",numero0)
-let reset=document.getElementById("ce").addEventListener("click",resetear)
-let suma=document.getElementById("s").addEventListener("click",suma)
-let resta=document.getElementById("r").addEventListener("click",resta)
-let multiplicacion=document.getElementById("m").addEventListener("click",multiplacion)
-let divison=document.getElementById("d").addEventListener("click",division)
-let resultado=document.getElementById("rs").addEventListener("click",resultado)
-let num1
-let num2
+//ariables
+let n1=document.getElementById("n1")////.addEventListener("click",numero1)
+let n2=document.getElementById("n2")//.addEventListener("click",numero2)
+let n3=document.getElementById("n3")//.addEventListener("click",numero3)
+let n4=document.getElementById("n4")//.addEventListener("click",numero4)
+let n5=document.getElementById("n5")//.addEventListener("click",numero5)
+let n6=document.getElementById("n6")//.addEventListener("click",numero6)
+let n7=document.getElementById("n7")//.addEventListener("click",numero7)
+let n8=document.getElementById("n8")//.addEventListener("click",numero8)
+let n9=document.getElementById("n9")//.addEventListener("click",numero9)
+let n0=document.getElementById("n0")//.addEventListener("click",numero0)
+let ce=document.getElementById("ce")//.addEventListener("click",resetear)
+let resultado=document.getElementById("resultado")
+let suma=document.getElementById("s")//.addEventListener("click",suma)
+let restar=document.getElementById("r")//.addEventListener("click",resta)
+let multiplicacion=document.getElementById("m")//.addEventListener("click",multiplacion)
+let division=document.getElementById("d")//.addEventListener("click",division)
+let boton_resultado=document.getElementById("rs")//.addEventListener("click",resultado)
+let punto=document.getElementById("punto")
+let borrar=document.getElementById("borrar")
+let numero_1
+let numero_2
 let operacion //guarda la operacion hasta que se resete los valores
-let res 
+let total 
 let activado=false
-function numero1() {
-n1.innerContent
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+n1 //combina el valor del resultado y añade el valor de numero
+let rs
+
+//funciones
+ borrar.addEventListener("click",function ()
+ {   
+     let x=resultado.textContent
+     let ar
+     ar= x.split("")
+     console.log( x )
+
+ar.pop()
+
+console.log(ar)
+resultado.textContent=ar
+  }
+)
+punto.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + ".";
+  }
+ )
+n0.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "0";
+  }
+)
+resultado.addEventListener("keydown",e=>{
+  if(e.key=="1"){
+    resultado.textContent = resultado.textContent  +"1"
+  }
 }
 
-function numero2() {
-let numero=document.getElementById("n2").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero3() {
-let numero=document.getElementById("n3").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero4() {
-let numero=document.getElementById("n4").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero5() {
-let numero=document.getElementById("n5").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero6() {
-let numero=document.getElementById("n6").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero7() {
-let numero=document.getElementById("n7").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero8() {
-let numero=document.getElementById("n8").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero9() {
-let numero=document.getElementById("n9").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function numero0() {
-let numero=document.getElementById("n0").innerHTML
-let numeroActual=document.getElementById("resultado").innerHTML //guarda el valor que hay en resultado
-document.getElementById("resultado").innerHTML=numeroActual+numero //combina el valor del resultado y añade el valor de numero
-}
-function ce(){
- //borra el valor que hay en resultado
+
+)
+n1.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  +"1";
+  }
+)
+n2.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "2";
+  }
+)
+n3.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "3";
+  }
+)
+n4.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "4";
+  }
+)
+n5.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "5";
+  }
+)
+n6.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "6";
+  }
+)
+n7.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "7";
+  }
+)
+n8.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "8";
+  }
+)
+n9.addEventListener("click",function ()
+ {
+      resultado.textContent = resultado.textContent  + "9";
+  }
+)
+
+
+ ce.addEventListener("click",function(){
 document.getElementById("resultado").innerHTML=""
-}
-function resetear(){
-document.getElementById("resultado").innerHTML=""
-num1 = 0
-num2 = 0
+numero_1 = 0
+numero_2 = 0
 operacion = " "
 activado=false
 res=0
 }
-function suma(){
-num1 = document.getElementById("resultado").textContent
+ )
+suma.addEventListener("click",function(){
+numero_1 = resultado.textContent
 operacion = "+" //guarda valor para usarlo como opcion en resolver
-ce()
+resultado.textContent=""
 }
-function resta(){
-num1 = document.getElementById("resultado").textContent
+  )
+restar.addEventListener("click",function(){
+numero_1 = resultado.textContent
 operacion = "-" //guarda valor para usarlo como opcion en resolver
-ce()
+resultado.textContent=""
 }
-function multiplacion(){
-num1 = document.getElementById("resultado").textContent
+)
+multiplicacion.addEventListener("click",function(){
+numero_1 = resultado.textContent
 operacion = "*" //guarda valor para usarlo como opcion en resolver
-ce()
+resultado.textContent=""
 }
-function division(){
-num1 = document.getElementById("resultado").textContent
+)
+division.addEventListener("click",function(){
+numero_1 = resultado.textContent
 operacion = "/" //guarda valor para usarlo como opcion en resolver
-ce()
+resultado.textContent=""
 }
-function resultado(){
-num2 = document.getElementById("resultado").textContent
+)
+boton_resultado.addEventListener("click",function(){
+numero_2 = resultado.textContent
 resolver()
 }
+)
 
 
 
@@ -113,42 +149,69 @@ function resolver(){
 switch(operacion){
 case "+":
 
- if(activado==true){
-let rs=res + parseFloat(num2)
-document.getElementById("resultado").textContent =rs
-console.log(rs)
+if(activado==true){
+  //suma al apretar resultado tl total mas el numero2
+total=parseFloat(resultado.textContent)
+total=total+rs
+resultado.textContent =total;
+
 
  }
 else{
-  
-  activado=true
+  total=parseFloat(numero_1)+parseFloat(numero_2)
+  resultado.textContent=total
+  rs=parseFloat(numero_2)//guarda para usarlo como suma al apretar resultado tl total mas el numero2
+  activado=true//activa bandera si esta activada ejecuta el codigo de arriba y no este
+  console.log(2)
+ numero_1=0
 }
 
 break
 case "-":
-res = parseFloat(num1) - parseFloat(num2)
-if(activado==true){
-let rs=res - parseFloat(num2)
-document.getElementById("resultado").textContent = rs
+
+if(activado){
+rs=total - parseFloat(numero_2)
+resultado.textContent =rs;
+
+
  }
 else{
-
+  total=parseFloat(numero_1)-parseFloat(numero_2)
+  resultado.textContent=total
+  activado=true
 }
-activado=true
+
 break
 case "*":
-res = parseFloat(num1) * parseFloat(num2)
-if(activado==true){
-let rs=res*parseFloat(num2)
-document.getElementById("resultado").textContent = rs
+
+if(activado){
+rs=total * parseFloat(numero_2)
+resultado.textContent =rs;
+
+
  }
-else{}
-activado=true
+else{
+  total=parseFloat(numero_1)*parseFloat(numero_2)
+  resultado.textContent=total
+  activado=true
+}
+
 break
 case "/":
-res = parseFloat(num1) / parseFloat(num2)
+
+if(activado){
+rs=total/parseFloat(numero_2)
+resultado.textContent =rs;
+
+
+ }
+else{
+  total=parseFloat(numero_1)/parseFloat(numero_2)
+  resultado.textContent=total
+  activado=true
+}
+
 break
 }
-document.getElementById("resultado").textContent = res
 
 }
